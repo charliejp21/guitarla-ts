@@ -1,12 +1,4 @@
-type Guitar = {
-
-    id: number,
-    name: string, 
-    image: string, 
-    description: string, 
-    price: number
-
-}
+import { Guitar } from "../types"
 
 export const db : Guitar[] = [
     {
