@@ -1,4 +1,4 @@
-import { Guitar } from "../types";
+import type { Guitar } from "../types";
 
 type GuitarProps = {
 
@@ -9,7 +9,7 @@ type GuitarProps = {
 
 function Guitar({guitar, addToCart} : GuitarProps){
 
-    const {id ,name, image, description, price } = guitar;
+    const {name, image, description, price } = guitar;
 
     return(
 

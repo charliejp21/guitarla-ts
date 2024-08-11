@@ -8,7 +8,7 @@ export type Guitar = {
 
 }
 
-export type GuitarItem = Pick <Guitar, 'id' | 'name' | 'price'> & {
+export type GuitarItem = Guitar & {
 
     quantity: number
 
