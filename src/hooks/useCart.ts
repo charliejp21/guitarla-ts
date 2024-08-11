@@ -51,13 +51,13 @@ export const useCart = () => {
 
     }
 
-    const removeFromCart = (id) => {
+    const removeFromCart = (id : Guitar['id']) => {
 
     setCart(prevCart => prevCart.filter(guitar => guitar.id !== id ))
 
     }
 
-    const increaseQuantity = (id) => {
+    const increaseQuantity = (id : Guitar['id']) => {
 
     const updateCart = cart.map( item => {
 
@@ -78,7 +78,7 @@ export const useCart = () => {
 
     }
 
-    const decraseQuantity = (id) => {
+    const decraseQuantity = (id : Guitar['id']) => {
 
     const updateCart = cart.map(item => {
 
@@ -110,7 +110,7 @@ export const useCart = () => {
      //State derivado
      const isEmpty = useMemo(() => cart.length === 0, [cart])
 
-     const cartTotal = useMemo(() => cart.reduce((total, item) => total + (item.quantity * item.price), 0))
+     const cartTotal = useMemo(() => cart.reduce((total, item) => total + (item.quantity * item.price), 0), [cart])
 
     return{
         data,
